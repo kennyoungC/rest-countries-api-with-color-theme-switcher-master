@@ -51,8 +51,7 @@ document.querySelector(`ul`).addEventListener(`click`, function (e) {
 
 const displayCards = (country) => {
   return ` <div class="col-12 mb-3 col-sm-6 col-lg-3">
-  <div class="card">
-   <a href="detail.html?name=${country.name}">
+  <div class="card"><a href="detail.html?name=${country.name}">
     <img
       src="${country.flags.png}"
       class="card-img-top"
