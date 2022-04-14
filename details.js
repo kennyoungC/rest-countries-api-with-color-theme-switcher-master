@@ -2,15 +2,20 @@
 
 window.onload = async () => {
   const countryName = new URLSearchParams(window.location.search).get("name");
-  const response = await fetch(
-    "https://restcountries.com/v2/name/" + countryName
-  );
-  const countries = await response.json();
-  const country = countries[0];
-  console.log(country);
-  displayDetails(country);
-
-  displayBorderCountries();
+  try {
+    const response = await fetch(
+      "https://restcountries.com/v2/name/" + countryName
+    );
+    if (!response.ok) {
+      throw new Error("incorrect fetch endpoint");
+    }
+    const countries = await response.json();
+    const country = countries[0];
+    displayDetails(country);
+    displayBorderCountries();
+  } catch (error) {
+    console.log(error);
+  }
 };
 
 const displayBorderCountries = () => {
@@ -18,6 +23,9 @@ const displayBorderCountries = () => {
   borders.addEventListener("click", async (e) => {
     const query = e.target.innerText;
     const response = await fetch("https://restcountries.com/v2/alpha/" + query);
+    if (!response.ok) {
+      throw new error("incorrect fetch endpoint");
+    }
     const country = await response.json();
     displayDetails(country);
   });
