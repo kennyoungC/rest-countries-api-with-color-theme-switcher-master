@@ -12,7 +12,7 @@ const displayCountries = async (url) => {
       throw "error";
     }
     const countries = await response.json();
-    // console.log(countries);
+
     const row = document.querySelector(`.row`);
     row.innerHTML = ``;
     countries.forEach((country) => {
