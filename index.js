@@ -27,7 +27,7 @@ const displayCountries = async (url) => {
   }
 };
 const input = document.querySelector(`input`);
-input.onkeyup = () => {
+input.onchange = () => {
   const query = input.value;
   const countryNameUrl = "https://restcountries.com/v2/name/" + query;
   if (query.length < 3) {
