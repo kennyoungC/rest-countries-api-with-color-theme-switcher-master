@@ -35,6 +35,9 @@
         background-color: hsl(0, 0%, 100%);
         padding: 10px 0;
       }
+      .bg-header {
+        background-color: hsl(209, 23%, 22%);
+      }
       main > section:nth-of-type(1) div.dropdown ul {
         font-weight: 800;
       }
@@ -52,43 +55,58 @@
         border-radius: 6px;
         box-shadow: 2px 1px 6px rgba(0, 0, 0, 0.15);
         border: none;
+        
+      }
+      .dark-mode,
+      .light-mode{
+        cursor: pointer;
+      }
+      .text-col{
+        color: white !important;
       }
       .card {
         height: 330px;
       }
-      .card > img {
+      .card img {
         height: 160px;
         object-fit: cover;
+      }
+      .place input::placeholder{
+        color: aliceblue;
       }
     </style>
 
     <title>Hello, world!</title>
   </head>
   <body>
-    <header>
+    <header class="">
       <div class="container d-flex justify-content-between align-items-center">
         <h1 class="mb-0 fw-bold fs-4">Where in the world?</h1>
         <div>
-          <p class="mb-0">
-            <span class="p-2"><i class="bi bi-moon"></i></span>Dark Mode
+          <p class="mb-0 dark-mode">
+            <span class="p-2  mode"><i class="bi bi-moon"></i></span>Dark Mode
+          </p>
+          <p class="mb-0 light-mode d-none">
+            <span class="p-2 "><i class="bi bi-brightness-high"></i></i></span>Light
+            Mode
           </p>
         </div>
       </div>
     </header>
     <main>
       <div class="container">
-        <section class="my-4 d-flex justify-content-between align-items-center">
+        <section class="my-4  d-flex flex-column flex-sm-row justify-content-between align-items-sm-center align-items-start gap-2">
           <div>
-            <div class="search-box">
+            <div class="search-box ">
               <input
-                type="text"
+                type="text "
                 id="search-input"
                 placeholder="&#xF002;   Search for a country..."
                 style="font-family: Arial, FontAwesome"
               />
             </div>
           </div>
-          <div class="dropdown">
+          <div class="dropdown ">
             <button
               class="btn bg-white dropdown-toggle shadow-sm"
               type="button"
@@ -102,13 +120,13 @@
               class="dropdown-menu rounded shadow-sm"
               aria-labelledby="dropdownMenuButton1"
             >
-              <li><a class="dropdown-item africa" href="#">Africa</a></li>
-              <li><a class="dropdown-item america" href="#">America</a></li>
-              <li><a class="dropdown-item asia" href="#">Asia</a></li>
+              <li><a class="dropdown-item" href="#">Africa</a></li>
+              <li><a class="dropdown-item" href="#">America</a></li>
+              <li><a class="dropdown-item" href="#">Asia</a></li>
               <li>
-                <a class="dropdown-item europe" href="#">Europe</a>
+                <a class="dropdown-item" href="#">Europe</a>
               </li>
-              <li><a class="dropdown-item oceania" href="#">Oceania</a></li>
+              <li><a class="dropdown-item" href="#">Oceania</a></li>
             </ul>
           </div>
         </section>
