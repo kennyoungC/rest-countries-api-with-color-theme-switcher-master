@@ -118,7 +118,6 @@ const toDarkMode = () => {
   filterUl.style.backgroundColor = `hsl(209, 23%, 22%)`;
   const liS = document.querySelectorAll("li > a");
   const cards = document.querySelectorAll(".card");
-  console.log(cards);
   cards.forEach((card) => {
     card.style.backgroundColor = `hsl(209, 23%, 22%)`;
     card.classList.add("text-light");
@@ -154,7 +153,6 @@ const toLightMode = () => {
   filterUl.style.backgroundColor = `hsl(0, 0%, 98%)`;
   const liS = document.querySelectorAll("li > a");
   const cards = document.querySelectorAll(".card");
-  console.log(cards);
   cards.forEach((card) => {
     card.style.backgroundColor = `hsl(0, 0%, 98%)`;
     card.classList.remove("text-light");
