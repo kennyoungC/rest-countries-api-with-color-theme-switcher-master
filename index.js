@@ -49,6 +49,17 @@ document.querySelector(`ul`).addEventListener(`click`, function (e) {
   }
 });
 
+// const select = document.querySelector(".custom-select");
+// console.log(select);
+// select.addEventListener("click", async (e) => {
+//   e.preventDefault();
+//   console.log(e.target.value);
+//   const region = e.target.value;
+//   const regionUrl =
+//     "https://restcountries.com/v3.1/region/" + region.toLowerCase();
+//   displayCountries(regionUrl);
+// });
+
 const displayCards = (country) => {
   return ` <div class="col-12 mb-3 col-sm-6 col-lg-3">
   <div class="card"><a href="detail.html?name=${country.name}">
